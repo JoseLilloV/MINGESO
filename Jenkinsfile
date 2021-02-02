@@ -10,6 +10,7 @@ pipeline {
     stage('Install packages') {
       steps {
         sh 'cd ./mingeso; npm -g install'
+        sh 'cd ./mingeso; npm install -g @vue/cli'
       }
     }
 
