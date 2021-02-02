@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:12'
-      args '-p 3000:3000'
-    }
-  }
-  stages {
+    stages {
     stage('Install packages') {
       steps {
         sh 'cd ./mingeso; npm -g install'
