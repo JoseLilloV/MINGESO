@@ -9,24 +9,24 @@ pipeline {
   stages {
     stage('Install packages') {
       steps {
-        sh 'npm -g install'
+        sh 'cd ./mingeso; npm -g install'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'npm run test -- --coverage --watchAll=false'
+        sh 'cd ./mingeso; npm run test -- --coverage --watchAll=false'
       }
     }
 
     stage('Linter') {
       steps {
-        sh 'npm run lint'
+        sh 'cd ./mingeso; npm run lint'
       }
     }
     stage('Build/Deploy'){
       steps {
-        sh 'npm run build'
+        sh 'cd ./mingeso; npm run build'
       }
     }
   }
