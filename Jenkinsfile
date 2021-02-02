@@ -1,5 +1,6 @@
 pipeline {
-    stages {
+  agent any
+  stages {
     stage('Install packages') {
       steps {
         sh 'cd ./mingeso; npm -g install'
